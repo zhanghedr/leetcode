@@ -16,7 +16,7 @@ import java.util.Queue;
  */
 public class RoundRobin {
 
-    private static class Process {
+    private class Process {
         public int reqTime;
         public int exeTime;
 
@@ -26,7 +26,7 @@ public class RoundRobin {
         }
     }
 
-    public static float roundRobin(int[] reqs, int[] exes, int maxExe) {
+    public float roundRobin(int[] reqs, int[] exes, int maxExe) {
         if (reqs == null || exes == null || reqs.length != exes.length)
             return 0;
         Queue<Process> queue = new LinkedList<>();

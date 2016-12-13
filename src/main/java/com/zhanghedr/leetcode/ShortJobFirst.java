@@ -17,7 +17,7 @@ import java.util.Queue;
  */
 public class ShortJobFirst {
 
-    private static class Process {
+    private class Process {
         public int reqTime;
         public int exeTime;
 
@@ -27,7 +27,7 @@ public class ShortJobFirst {
         }
     }
 
-    public static float shortJobFirst(int[] reqs, int[] exes) {
+    public float shortJobFirst(int[] reqs, int[] exes) {
         if (reqs == null || exes == null || reqs.length != exes.length)
             return 0;
         Queue<Process> queue = new PriorityQueue<>(new Comparator<Process>() {
