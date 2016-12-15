@@ -4,28 +4,18 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
+import com.zhanghedr.model.Process;
+
 /**
- * A processor is processing requests.
- * It can only process one request at a time.
- * It executes the shortest job first. 
- * If execute time is same then execute the first arrival one.
- * The sequences of arrival times and execute times are given.
- * Calculate the average wait time.
+ * A processor is processing requests. It can only process one request at a
+ * time. It executes the shortest job first. If execute time is same then
+ * execute the first arrival one. The sequences of arrival times and execute
+ * times are given. Calculate the average wait time.
  * 
  * @author hezha_000
  *
  */
 public class ShortJobFirst {
-
-    private class Process {
-        public int reqTime;
-        public int exeTime;
-
-        public Process(int reqTime, int exeTime) {
-            this.reqTime = reqTime;
-            this.exeTime = exeTime;
-        }
-    }
 
     public float shortJobFirst(int[] reqs, int[] exes) {
         if (reqs == null || exes == null || reqs.length != exes.length)

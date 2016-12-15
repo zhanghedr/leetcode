@@ -3,28 +3,18 @@ package com.zhanghedr.leetcode;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import com.zhanghedr.model.Process;
+
 /**
- * A processor is processing requests.
- * It can only process one request at a time.
- * Each request can be executed no more than maxExe time.
- * If one request is not finished by maxExe, then put it to queue tail.
- * The sequences of arrival times and execute times are given.
- * Calculate the average wait time.
+ * A processor is processing requests. It can only process one request at a
+ * time. Each request can be executed no more than maxExe time. If one request
+ * is not finished by maxExe, then put it to queue tail. The sequences of
+ * arrival times and execute times are given. Calculate the average wait time.
  * 
  * @author hezha_000
  *
  */
 public class RoundRobin {
-
-    private class Process {
-        public int reqTime;
-        public int exeTime;
-
-        public Process(int reqTime, int exeTime) {
-            this.reqTime = reqTime;
-            this.exeTime = exeTime;
-        }
-    }
 
     public float roundRobin(int[] reqs, int[] exes, int maxExe) {
         if (reqs == null || exes == null || reqs.length != exes.length)
